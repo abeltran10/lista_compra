@@ -1,4 +1,4 @@
-package com.abeltran10.lista_compra;
+package com.abeltran10.lista_compra.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
