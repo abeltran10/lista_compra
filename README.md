@@ -10,4 +10,5 @@ Lista De La Compra es una aplicación de escritorio para gestionar el stock de p
 
 Diagrama de clases
 
-<img width="742" height="413" alt="diagrama_clases" src="https://github.com/user-attachments/assets/cf2361d9-f468-4814-a840-4a950fb6deae" />
+<img width="1478" height="755" alt="diagrama_clases" src="https://github.com/user-attachments/assets/d4adc803-28aa-4278-b897-32375fc5f446" />
+
