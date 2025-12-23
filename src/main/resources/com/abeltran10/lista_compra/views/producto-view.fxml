@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="com.abeltran10.lista_compra.controllers.ProductoController">
+
+    <!-- ===== MENÚ SUPERIOR ===== -->
+    <top>
+        <MenuBar>
+            <Menu text="Gestionar">
+                <MenuItem text="Guardar" onAction="#onGuardar"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <!-- ===== CONTENIDO CENTRAL ===== -->
+    <center>
+        <HBox spacing="15">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <!-- TABLA + PESTAÑAS -->
+            <VBox spacing="10" HBox.hgrow="ALWAYS">
+
+                <!-- PESTAÑAS -->
+                <TabPane fx:id="tabPaneTipos">
+                    <Tab text="Alimentación" fx:id="tabAlimentacion"/>
+                    <Tab text="Limpieza" fx:id="tabLimpieza"/>
+                    <Tab text="Higiene" fx:id="tabHigiene"/>
+                    <Tab text="Otros" fx:id="tabOtros"/>
+                </TabPane>
+
+                <!-- TABLA -->
+                <TableView fx:id="tablaProductos" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colNombre" text="Nombre"/>
+                        <TableColumn fx:id="colPrecio" text="Precio"/>
+                        <TableColumn fx:id="colStock" text="Stock"/>
+                        <TableColumn fx:id="colInfo" text="Info"/>
+                    </columns>
+                </TableView>
+
+
+            </VBox>
+
+            <!-- BOTONES -->
+            <VBox spacing="10" alignment="TOP_CENTER">
+                <Button text="Crear" prefWidth="120" onAction="#onCrear"/>
+                <Button text="Editar" prefWidth="120" onAction="#onEditar"/>
+                <Button text="Eliminar" prefWidth="120" onAction="#onEliminar"/>
+            </VBox>
+
+        </HBox>
+    </center>
+
+</BorderPane>
