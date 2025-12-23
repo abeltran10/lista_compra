@@ -102,4 +102,8 @@ public abstract class Producto {
     public void setFechaUltimaCompra(LocalDate fechaUltimaCompra) {
         this.fechaUltimaCompra = fechaUltimaCompra;
     }
+
+    public boolean stockBajo() {
+        return stock <= stockLimite;
+    }
 }

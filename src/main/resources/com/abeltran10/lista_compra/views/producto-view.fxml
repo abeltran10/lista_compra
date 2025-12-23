@@ -35,16 +35,7 @@
                     <Tab text="Otros" fx:id="tabOtros"/>
                 </TabPane>
 
-                <!-- TABLA -->
-                <TableView fx:id="tablaProductos" VBox.vgrow="ALWAYS">
-                    <columns>
-                        <TableColumn fx:id="colNombre" text="Nombre"/>
-                        <TableColumn fx:id="colPrecio" text="Precio"/>
-                        <TableColumn fx:id="colStock" text="Stock"/>
-                        <TableColumn fx:id="colInfo" text="Info"/>
-                    </columns>
-                </TableView>
-
+                <StackPane fx:id="contenedorTabla" VBox.vgrow="ALWAYS"/>
 
             </VBox>
 
