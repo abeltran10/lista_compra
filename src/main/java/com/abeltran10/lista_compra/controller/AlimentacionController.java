@@ -18,7 +18,6 @@ public class AlimentacionController {
     @FXML private TableColumn<Producto, String> colNombre;
     @FXML private TableColumn<Producto, Double> colPrecioMedio;
     @FXML private TableColumn<Producto, Integer> colStock;
-    @FXML private TableColumn<Producto, String> colUnidad;
     @FXML private TableColumn<Producto, String> colFechaUltimaCompra;
     @FXML private TableColumn<Producto, String> colFechaCaducidad;
 
@@ -39,9 +38,6 @@ public class AlimentacionController {
 
         colStock.setCellValueFactory(
                 new PropertyValueFactory<>("stock"));
-
-        colUnidad.setCellValueFactory(
-                new PropertyValueFactory<>("unidad"));
 
         colFechaUltimaCompra.setCellValueFactory(
                 new PropertyValueFactory<>("fechaUltimaCompra"));

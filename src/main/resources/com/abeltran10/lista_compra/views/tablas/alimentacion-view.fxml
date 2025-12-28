@@ -11,7 +11,6 @@
         <TableColumn fx:id="colNombre" text="Nombre"/>
         <TableColumn fx:id="colPrecioMedio" text="Precio"/>
         <TableColumn fx:id="colStock" text="Stock"/>
-        <TableColumn fx:id="colUnidad" text="Unidad"/>
         <TableColumn fx:id="colFechaUltimaCompra" text="Fecha compra"/>
         <TableColumn fx:id="colFechaCaducidad" text="Fecha caducidad"/>
     </columns>
