@@ -6,7 +6,7 @@ import jakarta.persistence.Table;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "alimentacion")
+@Table(name = "Alimentacion")
 public class Alimentacion extends Producto{
 
     private LocalDate fechaCaducidad;
@@ -19,9 +19,9 @@ public class Alimentacion extends Producto{
         super(id);
     }
 
-    public Alimentacion(Integer id, String nombre, Double precioMedio, Integer stock, Integer stockLimite, String unidad,
+    public Alimentacion(Integer id, String nombre, Double precioMedio, Integer stock, Integer stockLimite,
                         LocalDate fechaUltimaCompra, LocalDate fechaCaducidad, String tipo) {
-        super(id, nombre, precioMedio, stock, stockLimite, unidad, fechaUltimaCompra);
+        super(id, nombre, precioMedio, stock, stockLimite, fechaUltimaCompra);
         this.fechaCaducidad = fechaCaducidad;
         this.tipo = tipo;
     }

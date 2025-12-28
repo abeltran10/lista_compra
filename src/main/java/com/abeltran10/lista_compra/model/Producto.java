@@ -24,9 +24,6 @@ public abstract class Producto {
     @Column(nullable = false)
     private Integer stockLimite;
 
-    @Column(nullable = false)
-    private String unidad;
-
     private LocalDate fechaUltimaCompra;
 
     public Producto() {
@@ -37,13 +34,12 @@ public abstract class Producto {
     }
 
     public Producto(Integer id, String nombre, Double precioMedio, Integer stock, Integer stockLimite,
-                    String unidad, LocalDate fechaUltimaCompra) {
+                      LocalDate fechaUltimaCompra) {
         this.id = id;
         this.nombre = nombre;
         this.precioMedio = precioMedio;
         this.stock = stock;
         this.stockLimite = stockLimite;
-        this.unidad = unidad;
         this.fechaUltimaCompra = fechaUltimaCompra;
     }
 
@@ -85,14 +81,6 @@ public abstract class Producto {
 
     public void setStockLimite(Integer stockLimite) {
         this.stockLimite = stockLimite;
-    }
-
-    public String getUnidad() {
-        return unidad;
-    }
-
-    public void setUnidad(String unidad) {
-        this.unidad = unidad;
     }
 
     public LocalDate getFechaUltimaCompra() {

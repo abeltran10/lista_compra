@@ -6,7 +6,7 @@ import jakarta.persistence.Table;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "limpieza")
+@Table(name = "Limpieza")
 public class Limpieza extends Producto {
 
     private Boolean esToxico;
@@ -18,9 +18,9 @@ public class Limpieza extends Producto {
         super(id);
     }
 
-    public Limpieza(Integer id, String nombre, Double precioMedio, Integer stock, Integer stockLimite, String unidad,
+    public Limpieza(Integer id, String nombre, Double precioMedio, Integer stock, Integer stockLimite,
                     LocalDate fechaUltimaCompra, Boolean esToxico) {
-        super(id, nombre, precioMedio, stock, stockLimite, unidad, fechaUltimaCompra);
+        super(id, nombre, precioMedio, stock, stockLimite, fechaUltimaCompra);
         this.esToxico = esToxico;
     }
 
