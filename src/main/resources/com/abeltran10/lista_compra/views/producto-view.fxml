@@ -14,6 +14,10 @@
             <Menu text="Gestionar">
                 <MenuItem text="Guardar" onAction="#onGuardar"/>
             </Menu>
+            <Menu text="Ver">
+                <MenuItem text="Stock bajo" onAction="#onStockBajo"/>
+                <MenuItem text="Todos" onAction="#onVerTodos"/>
+            </Menu>
         </MenuBar>
     </top>
 
@@ -43,6 +47,7 @@
             <VBox spacing="10" alignment="TOP_CENTER">
                 <Button text="Crear" prefWidth="120" onAction="#onCrear"/>
                 <Button text="Editar" prefWidth="120" onAction="#onEditar"/>
+                <Button text="Ver" prefWidth="120" onAction="#onVer"/>
                 <Button text="Eliminar" prefWidth="120" onAction="#onEliminar"/>
             </VBox>
 
