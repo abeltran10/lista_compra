@@ -1,7 +1,8 @@
 package com.abeltran10.lista_compra.controller;
 
-import com.abeltran10.lista_compra.model.Alimentacion;
+import com.abeltran10.lista_compra.controller.intrf.ProductoControllerIntrfz;
 import com.abeltran10.lista_compra.model.Producto;
+import com.abeltran10.lista_compra.num.Tipo;
 import com.abeltran10.lista_compra.service.ProductoService;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
@@ -11,7 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.util.List;
 
-public class AlimentacionController {
+public class AlimentacionController implements ProductoControllerIntrfz {
 
     @FXML private TableView<Producto> tablaAlimentacion;
 
@@ -47,9 +48,19 @@ public class AlimentacionController {
     }
 
     private void cargarDatos() {
-        List<Producto> productos = service.obtenerTodos();
+        List<Producto> productos = service.obtenerTodos(Tipo.ALIMENTACION);
         tablaAlimentacion.setItems(FXCollections.observableArrayList(productos));
     }
 
 
+    @Override
+    public void onStockBajo() {
+        List<Producto> productos = service.filtrarStockBajo(Tipo.ALIMENTACION);
+        tablaAlimentacion.setItems(FXCollections.observableArrayList(productos));
+    }
+
+    @Override
+    public void onVerTodos() {
+        cargarDatos();
+    }
 }
