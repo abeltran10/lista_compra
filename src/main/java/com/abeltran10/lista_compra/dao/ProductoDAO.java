@@ -7,12 +7,26 @@ import jakarta.persistence.EntityManager;
 import java.util.List;
 
 public class ProductoDAO {
-    private EntityManager em = JPA.getEntityManager();
 
-    public List<Producto> findAlimentacion() {
+    public List<Producto> findAllByType(String tipo) {
+        EntityManager em = JPA.getEntityManager();
+
         try {
             return em.createQuery(
-                    "SELECT p FROM Producto p WHERE TYPE(p) = Alimentacion",
+                    "SELECT p FROM Producto p WHERE TYPE(p) = " + tipo,
+                    Producto.class
+            ).getResultList();
+        } finally {
+            em.close();
+        }
+    }
+
+    public List<Producto> filtrarStockBajo(String tipo) {
+        EntityManager em = JPA.getEntityManager();
+
+        try {
+            return em.createQuery(
+                    "SELECT p FROM Producto p WHERE TYPE(p) = " + tipo + " AND p.stock <= p.stockLimite" ,
                     Producto.class
             ).getResultList();
         } finally {
