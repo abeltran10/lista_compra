@@ -9,7 +9,8 @@ Lista De La Compra es una aplicación de escritorio para gestionar el stock de p
 ### UML
 Diagrama de casos de uso
 
-<img width="406" height="467" alt="diagrama_casos_uso" src="https://github.com/user-attachments/assets/871ce144-b75e-4d31-a2b1-82c8a973f5a4" />
+<img width="409" height="559" alt="diagrama_casos_uso" src="https://github.com/user-attachments/assets/e2de32ad-4ba1-441d-a3bb-3fdc33bac787" />
+
 
 
 
