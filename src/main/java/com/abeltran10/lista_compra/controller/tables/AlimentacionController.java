@@ -1,8 +1,7 @@
-package com.abeltran10.lista_compra.controller;
+package com.abeltran10.lista_compra.controller.tables;
 
 import com.abeltran10.lista_compra.controller.forms.AlimentacionFormController;
-import com.abeltran10.lista_compra.controller.intrf.ProductoControllerIntrfz;
-import com.abeltran10.lista_compra.model.Alimentacion;
+import com.abeltran10.lista_compra.controller.intrfz.ProductoControllerIntrfz;
 import com.abeltran10.lista_compra.model.Producto;
 import com.abeltran10.lista_compra.enumerator.Tipo;
 import com.abeltran10.lista_compra.service.ProductoService;
@@ -80,7 +79,7 @@ public class AlimentacionController implements ProductoControllerIntrfz {
     public void onCrear() {
         try {
             FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/com/abeltran10/lista_compra/views/formularios/alimentacion-form.fxml")
+                    getClass().getResource("/com/abeltran10/lista_compra/views/forms/alimentacion-form.fxml")
             );
 
             Parent root = loader.load();

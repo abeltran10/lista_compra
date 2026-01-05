@@ -5,7 +5,7 @@
 <?import javafx.geometry.Insets?>
 
 <TableView xmlns:fx="http://javafx.com/fxml"
-           fx:controller="com.abeltran10.lista_compra.controller.OtrosController"
+           fx:controller="com.abeltran10.lista_compra.controller.tables.OtrosController"
            fx:id="tablaOtros" VBox.vgrow="ALWAYS">
     <columns>
         <TableColumn fx:id="colNombre" text="Nombre"/>

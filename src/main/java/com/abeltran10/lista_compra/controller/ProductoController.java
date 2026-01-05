@@ -1,15 +1,12 @@
 package com.abeltran10.lista_compra.controller;
 
-import com.abeltran10.lista_compra.controller.intrf.ProductoControllerIntrfz;
-import com.abeltran10.lista_compra.model.Producto;
+import com.abeltran10.lista_compra.controller.intrfz.ProductoControllerIntrfz;
 import com.abeltran10.lista_compra.service.ProductoService;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.layout.StackPane;
 
 import java.io.IOException;
@@ -27,15 +24,15 @@ public class ProductoController {
 
     @FXML
     public void initialize() {
-        cargarTabla(tabPaneTipos.getTabs().get(0), "/com/abeltran10/lista_compra/views/tablas/alimentacion-view.fxml");
+        cargarTabla(tabPaneTipos.getTabs().get(0), "/com/abeltran10/lista_compra/views/tables/alimentacion-view.fxml");
 
         tabPaneTipos.getSelectionModel().selectedIndexProperty()
                 .addListener((obs, oldVal, newVal) -> {
                     switch (newVal.intValue()) {
-                        case 0 -> cargarTabla(tabPaneTipos.getTabs().get(0), "/com/abeltran10/lista_compra/views/tablas/alimentacion-view.fxml");
-                        case 1 -> cargarTabla(tabPaneTipos.getTabs().get(1),"/com/abeltran10/lista_compra/views/tablas/limpieza-view.fxml");
-                        case 2 -> cargarTabla(tabPaneTipos.getTabs().get(2), "/com/abeltran10/lista_compra/views/tablas/higiene-view.fxml");
-                        case 3 -> cargarTabla(tabPaneTipos.getTabs().get(3),"/com/abeltran10/lista_compra/views/tablas/otros-view.fxml");
+                        case 0 -> cargarTabla(tabPaneTipos.getTabs().get(0), "/com/abeltran10/lista_compra/views/tables/alimentacion-view.fxml");
+                        case 1 -> cargarTabla(tabPaneTipos.getTabs().get(1), "/com/abeltran10/lista_compra/views/tables/limpieza-view.fxml");
+                        case 2 -> cargarTabla(tabPaneTipos.getTabs().get(2), "/com/abeltran10/lista_compra/views/tables/higiene-view.fxml");
+                        case 3 -> cargarTabla(tabPaneTipos.getTabs().get(3), "/com/abeltran10/lista_compra/views/tables/otros-view.fxml");
                     }
                 });
     }

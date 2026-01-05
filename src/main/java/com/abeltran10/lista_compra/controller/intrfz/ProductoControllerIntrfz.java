@@ -1,4 +1,4 @@
-package com.abeltran10.lista_compra.controller.intrf;
+package com.abeltran10.lista_compra.controller.intrfz;
 
 public interface ProductoControllerIntrfz {
 

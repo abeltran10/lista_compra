@@ -6,7 +6,7 @@
 
 
 <TableView xmlns:fx="http://javafx.com/fxml"
-           fx:controller="com.abeltran10.lista_compra.controller.HigieneController"
+           fx:controller="com.abeltran10.lista_compra.controller.tables.HigieneController"
            fx:id="tablaHigiene" VBox.vgrow="ALWAYS">
     <columns>
         <TableColumn fx:id="colNombre" text="Nombre"/>
