@@ -33,4 +33,16 @@ Crear
 <img width="453" height="543" alt="Captura desde 2026-01-05 12-59-38" src="https://github.com/user-attachments/assets/f6b86309-34bb-408a-8afa-52060efbe7a3" />
 
 
+Ver
+
+<img width="453" height="543" alt="Captura desde 2026-01-05 22-01-49" src="https://github.com/user-attachments/assets/643771b3-d339-4e40-be13-02c0d37e3e28" />
+
+
+Editar
+
+<img width="453" height="543" alt="Captura desde 2026-01-05 22-02-07" src="https://github.com/user-attachments/assets/1ac6d238-b5a5-47e4-91ee-38b1ee7f5475" />
+
+
+
+
 
