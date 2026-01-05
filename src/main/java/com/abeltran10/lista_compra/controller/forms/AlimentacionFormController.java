@@ -74,7 +74,8 @@ public class AlimentacionFormController {
     @FXML
     private void onGuardar() {
         try {
-            producto = new Alimentacion();
+            if (producto == null) producto = new Alimentacion();
+
             producto.setNombre(txtNombre.getText());
             producto.setPrecioMedio(Double.parseDouble(txtPrecioMedio.getText()));
             producto.setStock(spStock.getValue());

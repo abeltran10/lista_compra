@@ -85,7 +85,14 @@ public class ProductoController {
     }
 
     @FXML
-    public void onEditar() {}
+    public void onEditar() {
+        Tab tabSeleccionada = tabPaneTipos.getSelectionModel().getSelectedItem();
+        ProductoControllerIntrfz controller = controllersPorTab.get(tabSeleccionada);
+
+        if (controller != null) {
+            controller.onEditar();
+        }
+    }
 
     @FXML
     public void onVer() {

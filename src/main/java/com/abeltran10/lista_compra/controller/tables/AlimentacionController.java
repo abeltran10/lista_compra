@@ -135,4 +135,38 @@ public class AlimentacionController implements ProductoControllerIntrfz {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public void onEditar() {
+        Producto producto = tablaAlimentacion.getSelectionModel().getSelectedItem();
+
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/com/abeltran10/lista_compra/views/forms/alimentacion-form.fxml")
+            );
+
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle(producto.getNombre());
+            stage.setScene(new Scene(root));
+            stage.initModality(Modality.APPLICATION_MODAL);
+
+            AlimentacionFormController controller = loader.getController();
+            controller.setProducto((Alimentacion) producto);
+            controller.setStage(stage);
+
+            stage.showAndWait();
+
+            Producto productoEditar = controller.getProducto();
+            if (productoEditar != null) {
+                service.editarProducto(productoEditar);
+
+                cargarDatos();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -21,4 +21,8 @@ public class ProductoService {
     public void anyadirProducto(Producto producto) {
         dao.guardarProducto(producto);
     }
+
+    public void editarProducto(Producto producto) {
+        dao.guardarProducto(producto);
+    }
 }

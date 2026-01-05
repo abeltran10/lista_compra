@@ -41,7 +41,11 @@ public class ProductoDAO {
 
         try {
             tx.begin();
-            em.persist(producto);
+            if (producto.getId() == null) {
+                em.persist(producto);
+            } else {
+                em.merge(producto);
+            }
             tx.commit();
         } catch (Exception e) {
             if (tx.isActive()) {

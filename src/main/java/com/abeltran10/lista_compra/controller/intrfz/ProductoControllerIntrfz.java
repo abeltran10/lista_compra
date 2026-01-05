@@ -9,4 +9,6 @@ public interface ProductoControllerIntrfz {
     public void onCrear();
 
     public void onVer();
+
+    public void onEditar();
 }
