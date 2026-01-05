@@ -1,4 +1,4 @@
-package com.abeltran10.lista_compra.num;
+package com.abeltran10.lista_compra.enumerator;
 
 public enum Tipo {
     ALIMENTACION("Alimentacion"),

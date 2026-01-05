@@ -13,5 +13,6 @@
         <TableColumn fx:id="colStock" text="Stock"/>
         <TableColumn fx:id="colFechaUltimaCompra" text="Fecha compra"/>
         <TableColumn fx:id="colFechaCaducidad" text="Fecha caducidad"/>
+        <TableColumn fx:id="colTipo" text="Tipo"/>
     </columns>
 </TableView>

@@ -21,7 +21,7 @@ public class ProductoController {
     @FXML private TabPane tabPaneTipos;
     @FXML private StackPane contenedorTabla;
 
-    private final Map<Tab, ProductoControllerIntrfz> controllersPorTab = new HashMap<>();
+    private Map<Tab, ProductoControllerIntrfz> controllersPorTab = new HashMap<>();
 
     private ProductoService service;
 
@@ -78,7 +78,14 @@ public class ProductoController {
     public void onGuardar() {}
 
     @FXML
-    public void onCrear() {}
+    public void onCrear() {
+        Tab tabSeleccionada = tabPaneTipos.getSelectionModel().getSelectedItem();
+        ProductoControllerIntrfz controller = controllersPorTab.get(tabSeleccionada);
+
+        if (controller != null) {
+            controller.onCrear();
+        }
+    }
 
     @FXML
     public void onEditar() {}

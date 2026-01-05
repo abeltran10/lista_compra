@@ -3,6 +3,7 @@ package com.abeltran10.lista_compra.dao;
 import com.abeltran10.lista_compra.model.Producto;
 import com.abeltran10.lista_compra.utils.JPA;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
 
 import java.util.List;
 
@@ -32,5 +33,24 @@ public class ProductoDAO {
         } finally {
             em.close();
         }
+    }
+
+    public void guardarProducto(Producto producto) {
+        EntityManager em = JPA.getEntityManager();
+        EntityTransaction tx = em.getTransaction();
+
+        try {
+            tx.begin();
+            em.persist(producto);
+            tx.commit();
+        } catch (Exception e) {
+            if (tx.isActive()) {
+                tx.rollback();
+            }
+            throw e;
+        } finally {
+            em.close();
+        }
+
     }
 }
