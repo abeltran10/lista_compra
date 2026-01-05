@@ -16,3 +16,16 @@ Diagrama de clases
 
 <img width="1478" height="739" alt="diagrama_clases" src="https://github.com/user-attachments/assets/7f3b51ab-c423-4672-bb63-5cb5fb21adc6" />
 
+
+### Pantallas
+
+Inicial
+
+<img width="961" height="736" alt="Captura desde 2026-01-05 12-58-22" src="https://github.com/user-attachments/assets/e41923c9-db34-4150-809b-2380b26931e7" />
+
+Crear
+
+<img width="453" height="543" alt="Captura desde 2026-01-05 12-59-38" src="https://github.com/user-attachments/assets/f6b86309-34bb-408a-8afa-52060efbe7a3" />
+
+
+
