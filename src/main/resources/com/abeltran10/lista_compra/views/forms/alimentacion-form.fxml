@@ -73,7 +73,7 @@
                 <Insets top="10" right="10" bottom="10" left="10"/>
             </padding>
             <Button text="Cancelar" onAction="#onCancelar"/>
-            <Button text="Guardar" defaultButton="true" onAction="#onGuardar"/>
+            <Button fx:id="btnGuardar" text="Guardar" defaultButton="true" onAction="#onGuardar"/>
         </HBox>
     </bottom>
 

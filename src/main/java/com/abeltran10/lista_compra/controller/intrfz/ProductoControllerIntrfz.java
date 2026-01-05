@@ -7,4 +7,6 @@ public interface ProductoControllerIntrfz {
     public void onVerTodos();
 
     public void onCrear();
+
+    public void onVer();
 }

@@ -2,6 +2,7 @@ package com.abeltran10.lista_compra.controller.tables;
 
 import com.abeltran10.lista_compra.controller.forms.AlimentacionFormController;
 import com.abeltran10.lista_compra.controller.intrfz.ProductoControllerIntrfz;
+import com.abeltran10.lista_compra.model.Alimentacion;
 import com.abeltran10.lista_compra.model.Producto;
 import com.abeltran10.lista_compra.enumerator.Tipo;
 import com.abeltran10.lista_compra.service.ProductoService;
@@ -100,6 +101,35 @@ public class AlimentacionController implements ProductoControllerIntrfz {
 
                 cargarDatos();
             }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onVer() {
+        Producto producto = tablaAlimentacion.getSelectionModel().getSelectedItem();
+
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/com/abeltran10/lista_compra/views/forms/alimentacion-form.fxml")
+            );
+
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle(producto.getNombre());
+            stage.setScene(new Scene(root));
+            stage.initModality(Modality.APPLICATION_MODAL);
+
+            AlimentacionFormController controller = loader.getController();
+            controller.setProducto((Alimentacion) producto);
+            controller.disableInputs(true);
+            controller.getBtnGuardar().setDisable(true);
+            controller.setStage(stage);
+
+            stage.showAndWait();
 
         } catch (IOException e) {
             e.printStackTrace();
