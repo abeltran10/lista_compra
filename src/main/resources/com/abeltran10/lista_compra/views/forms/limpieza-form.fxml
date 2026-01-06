@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="com.abeltran10.lista_compra.controller.forms.LimpiezaFormController"
+        prefWidth="450"
+        prefHeight="450">
+
+    <!-- ===== TÍTULO ===== -->
+    <top>
+        <Label text="Producto de Limpieza"
+               BorderPane.alignment="CENTER"
+               style="-fx-font-size: 18px; -fx-font-weight: bold;">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+        </Label>
+    </top>
+
+    <!-- ===== FORMULARIO ===== -->
+    <center>
+        <GridPane hgap="10" vgap="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <columnConstraints>
+                <ColumnConstraints minWidth="140"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+
+            <!-- Nombre -->
+            <Label text="Nombre:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtNombre" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <!-- Precio medio -->
+            <Label text="Precio medio (€):" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtPrecioMedio" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <!-- Stock -->
+            <Label text="Stock:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <Spinner fx:id="spStock" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <!-- Stock límite -->
+            <Label text="Stock límite:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <Spinner fx:id="spStockLimite" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <!-- Fecha última compra -->
+            <Label text="Última compra:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="dpFechaUltimaCompra" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+            <!-- Es tóxico -->
+            <Label text="Producto tóxico:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <CheckBox fx:id="chkEsToxico" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        </GridPane>
+    </center>
+
+    <!-- ===== BOTONES ===== -->
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <Button text="Cancelar" onAction="#onCancelar"/>
+            <Button fx:id="btnGuardar"
+                    text="Guardar"
+                    defaultButton="true"
+                    onAction="#onGuardar"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

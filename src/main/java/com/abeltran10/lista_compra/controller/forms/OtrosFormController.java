@@ -1,12 +1,11 @@
 package com.abeltran10.lista_compra.controller.forms;
 
-import com.abeltran10.lista_compra.model.Alimentacion;
-import com.abeltran10.lista_compra.model.Producto;
+import com.abeltran10.lista_compra.model.Otros;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-public class AlimentacionFormController {
+public class OtrosFormController {
 
     @FXML private Button btnGuardar;
     @FXML private TextField txtNombre;
@@ -14,39 +13,29 @@ public class AlimentacionFormController {
     @FXML private Spinner<Integer> spStock;
     @FXML private Spinner<Integer> spStockLimite;
     @FXML private DatePicker dpFechaUltimaCompra;
-    @FXML private DatePicker dpFechaCaducidad;
-    @FXML private TextField txtTipo;
-
+    @FXML private TextField txtDescripcion;
 
     private Stage stage;
-    private Alimentacion producto;
+    private Otros producto;
+
 
     public void setStage(Stage stage) {
         this.stage = stage;
     }
 
     public Button getBtnGuardar() {
-        return this.btnGuardar;
+        return btnGuardar;
     }
 
-    public Alimentacion getProducto() {
+    public Otros getProducto() {
         return producto;
     }
 
-    public void setProducto(Alimentacion producto) {
+    public void setProducto(Otros producto) {
         this.producto = producto;
         cargarDatos();
     }
 
-    public void disableInputs(boolean disable) {
-        txtNombre.setDisable(disable);
-        txtPrecioMedio.setDisable(disable);
-        spStock.setDisable(disable);
-        spStockLimite.setDisable(disable);
-        dpFechaUltimaCompra.setDisable(disable);
-        dpFechaCaducidad.setDisable(disable);
-        txtTipo.setDisable(disable);
-    }
 
     @FXML
     public void initialize() {
@@ -59,6 +48,7 @@ public class AlimentacionFormController {
         );
     }
 
+
     private void cargarDatos() {
         if (producto == null) return;
 
@@ -67,22 +57,29 @@ public class AlimentacionFormController {
         spStock.getValueFactory().setValue(producto.getStock());
         spStockLimite.getValueFactory().setValue(producto.getStockLimite());
         dpFechaUltimaCompra.setValue(producto.getFechaUltimaCompra());
-        dpFechaCaducidad.setValue(producto.getFechaCaducidad());
-        txtTipo.setText(producto.getTipo());
+        txtDescripcion.setText(producto.getDescripcion());
+    }
+
+    public void disableInputs(boolean disable) {
+        txtNombre.setDisable(disable);
+        txtPrecioMedio.setDisable(disable);
+        spStock.setDisable(disable);
+        spStockLimite.setDisable(disable);
+        dpFechaUltimaCompra.setDisable(disable);
+        txtDescripcion.setDisable(disable);
     }
 
     @FXML
     private void onGuardar() {
         try {
-            if (producto == null) producto = new Alimentacion();
+            if (producto == null) producto = new Otros();
 
             producto.setNombre(txtNombre.getText());
             producto.setPrecioMedio(Double.parseDouble(txtPrecioMedio.getText()));
             producto.setStock(spStock.getValue());
             producto.setStockLimite(spStockLimite.getValue());
             producto.setFechaUltimaCompra(dpFechaUltimaCompra.getValue());
-            producto.setFechaCaducidad(dpFechaCaducidad.getValue());
-            producto.setTipo(txtTipo.getText());
+            producto.setDescripcion(txtDescripcion.getText());
 
             stage.close();
         } catch (Exception e) {

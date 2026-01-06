@@ -1,5 +1,6 @@
 package com.abeltran10.lista_compra.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
@@ -9,9 +10,10 @@ import java.time.LocalDate;
 @Table(name = "Otros")
 public class Otros extends Producto {
 
+    @Column(nullable = false)
     private String descripcion;
 
-    protected Otros() {
+    public Otros() {
     }
 
     public Otros(Integer id) {

@@ -1,5 +1,6 @@
 package com.abeltran10.lista_compra.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
@@ -9,7 +10,10 @@ import java.time.LocalDate;
 @Table(name = "Alimentacion")
 public class Alimentacion extends Producto{
 
+    @Column(nullable = false)
     private LocalDate fechaCaducidad;
+
+    @Column(nullable = false)
     private String tipo;
 
     public Alimentacion() {
