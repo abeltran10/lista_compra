@@ -55,7 +55,7 @@ public class AlimentacionFormController {
         );
 
         spStockLimite.setValueFactory(
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 999, 1)
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 999, 1)
         );
     }
 

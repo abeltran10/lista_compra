@@ -11,7 +11,7 @@ import java.time.LocalDate;
 public class Higiene extends Producto {
 
     @Column(nullable = false)
-    private Boolean usoPersonal;
+    private String usoPersonal;
 
     public Higiene() {
     }
@@ -21,16 +21,20 @@ public class Higiene extends Producto {
     }
 
     public Higiene(Integer id, String nombre, Double precioMedio, Integer stock, Integer stockLimite,
-                   LocalDate fechaUltimaCompra, Boolean usoPersonal) {
+                   LocalDate fechaUltimaCompra, String usoPersonal) {
         super(id, nombre, precioMedio, stock, stockLimite, fechaUltimaCompra);
         this.usoPersonal = usoPersonal;
     }
 
-    public Boolean getUsoPersonal() {
+    public String getUsoPersonal() {
         return usoPersonal;
     }
 
-    public void setUsoPersonal(Boolean usoPersonal) {
+    public void setUsoPersonal(String usoPersonal) {
         this.usoPersonal = usoPersonal;
+    }
+
+    public boolean isUsoPersonal() {
+        return "S".equals(usoPersonal);
     }
 }

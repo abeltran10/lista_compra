@@ -30,7 +30,7 @@ public class HigieneController implements ProductoControllerIntrfz {
     @FXML private TableColumn<Producto, Double> colPrecioMedio;
     @FXML private TableColumn<Producto, Integer> colStock;
     @FXML private TableColumn<Producto, String> colFechaUltimaCompra;
-    @FXML private TableColumn<Producto, Boolean> colUsoPersonal;
+    @FXML private TableColumn<Producto, String> colUsoPersonal;
 
     private final ProductoService service = new ProductoService();
 

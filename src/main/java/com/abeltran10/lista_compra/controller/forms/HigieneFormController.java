@@ -43,7 +43,7 @@ public class HigieneFormController {
         );
 
         spStockLimite.setValueFactory(
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 999, 1)
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 999, 1)
         );
     }
 
@@ -55,7 +55,7 @@ public class HigieneFormController {
         spStock.getValueFactory().setValue(producto.getStock());
         spStockLimite.getValueFactory().setValue(producto.getStockLimite());
         dpFechaUltimaCompra.setValue(producto.getFechaUltimaCompra());
-        chkUsoPersonal.setSelected(producto.getUsoPersonal());
+        chkUsoPersonal.setSelected(producto.isUsoPersonal());
     }
 
     @FXML
@@ -68,7 +68,7 @@ public class HigieneFormController {
             producto.setStock(spStock.getValue());
             producto.setStockLimite(spStockLimite.getValue());
             producto.setFechaUltimaCompra(dpFechaUltimaCompra.getValue());
-            producto.setUsoPersonal(chkUsoPersonal.isSelected());
+            producto.setUsoPersonal(chkUsoPersonal.isSelected() ? "S" : "N");
 
             stage.close();
         } catch (Exception e) {
