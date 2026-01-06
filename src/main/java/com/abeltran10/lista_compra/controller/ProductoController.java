@@ -105,5 +105,12 @@ public class ProductoController {
     }
 
     @FXML
-    public void onEliminar() {}
+    public void onEliminar() {
+        Tab tabSeleccionada = tabPaneTipos.getSelectionModel().getSelectedItem();
+        ProductoControllerIntrfz controller = controllersPorTab.get(tabSeleccionada);
+
+        if (controller != null) {
+            controller.onEliminar();
+        }
+    }
 }

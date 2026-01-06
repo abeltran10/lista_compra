@@ -57,4 +57,24 @@ public class ProductoDAO {
         }
 
     }
+
+    public void eliminarProducto(Producto producto) {
+        EntityManager em = JPA.getEntityManager();
+        EntityTransaction tx = em.getTransaction();
+
+        try {
+            tx.begin();
+            producto = em.find(Producto.class, producto.getId());
+            em.remove(producto);
+            tx.commit();
+        } catch (Exception e) {
+            if (tx.isActive()) {
+                tx.rollback();
+            }
+            throw e;
+        } finally {
+            em.close();
+        }
+
+    }
 }

@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -168,5 +169,19 @@ public class AlimentacionController implements ProductoControllerIntrfz {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void onEliminar() {
+        Producto producto = tablaAlimentacion.getSelectionModel().getSelectedItem();
+        service.eliminarProducto(producto);
+
+        cargarDatos();
+
+        mostrarConfirmacion("Producto eliminado con exito.");
+    }
+
+    private void mostrarConfirmacion(String msg) {
+        new Alert(Alert.AlertType.CONFIRMATION, msg).showAndWait();
     }
 }

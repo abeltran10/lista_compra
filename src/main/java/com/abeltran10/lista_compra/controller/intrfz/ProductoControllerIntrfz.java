@@ -11,4 +11,6 @@ public interface ProductoControllerIntrfz {
     public void onVer();
 
     public void onEditar();
+
+    public void onEliminar();
 }

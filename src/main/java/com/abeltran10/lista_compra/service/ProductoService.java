@@ -25,4 +25,8 @@ public class ProductoService {
     public void editarProducto(Producto producto) {
         dao.guardarProducto(producto);
     }
+
+    public void eliminarProducto(Producto producto) {
+        dao.eliminarProducto(producto);
+    }
 }
