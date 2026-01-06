@@ -49,6 +49,8 @@ Eliminar
 
 ## Release
 
+- [alpha-v0.0.1](https://github.com/abeltran10/lista_compra/releases/tag/alpha-v0.0.1) Última
+
 - [beta-v0.0.1](https://github.com/abeltran10/lista_compra/releases/tag/beta-v0.0.1)
 
 
