@@ -13,7 +13,7 @@ public class Otros extends Producto {
     @Column(nullable = false)
     private String descripcion;
 
-    protected Otros() {
+    public Otros() {
     }
 
     public Otros(Integer id) {
