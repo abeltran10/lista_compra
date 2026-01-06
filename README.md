@@ -42,6 +42,11 @@ Editar
 
 <img width="453" height="543" alt="Captura desde 2026-01-05 22-02-07" src="https://github.com/user-attachments/assets/1ac6d238-b5a5-47e4-91ee-38b1ee7f5475" />
 
+Eliminar
+
+<img width="366" height="192" alt="Captura desde 2026-01-06 02-23-09" src="https://github.com/user-attachments/assets/11c371f2-ca8c-4e07-bd03-6012005bb297" />
+
+
 
 
 
