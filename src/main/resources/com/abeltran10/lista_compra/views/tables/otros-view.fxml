@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<TableView xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.abeltran10.lista_compra.controller.tables.OtrosController"
+           fx:id="tablaOtros" VBox.vgrow="ALWAYS">
+    <columns>
+        <TableColumn fx:id="colNombre" text="Nombre"/>
+        <TableColumn fx:id="colPrecioMedio" text="Precio"/>
+        <TableColumn fx:id="colStock" text="Stock"/>
+        <TableColumn fx:id="colFechaUltimaCompra" text="Fecha compra"/>
+        <TableColumn fx:id="colDescripcion" text="Descripción"/>
+    </columns>
+</TableView>
