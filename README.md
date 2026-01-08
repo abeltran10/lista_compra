@@ -16,7 +16,7 @@ Diagrama de casos de uso
 
 Diagrama de clases
 
-<img width="2503" height="971" alt="diagrama_clases" src="https://github.com/user-attachments/assets/69ce1d76-8e2f-4409-b69d-4a7301366154" />
+<img width="2503" height="1004" alt="diagrama_clases" src="https://github.com/user-attachments/assets/3470daeb-e3ca-4955-8203-ea4e423664eb" />
 
 
 
@@ -46,10 +46,17 @@ Eliminar
 
 <img width="366" height="192" alt="Captura desde 2026-01-06 02-23-09" src="https://github.com/user-attachments/assets/11c371f2-ca8c-4e07-bd03-6012005bb297" />
 
+Alerta stock bajo
+
+<img width="640" height="270" alt="Captura desde 2026-01-08 15-13-27" src="https://github.com/user-attachments/assets/b0e9521d-4700-464c-9c9e-ed8aa12f16cc" />
+
+
 
 ## Release
 
-- [alpha-v0.0.1](https://github.com/abeltran10/lista_compra/releases/tag/alpha-v0.0.1) Última
+- [v1.0.0](https://github.com/abeltran10/lista_compra/releases/tag/v1.0.0) Estable
+
+- [alpha-v0.0.1](https://github.com/abeltran10/lista_compra/releases/tag/alpha-v0.0.1) 
 
 - [beta-v0.0.1](https://github.com/abeltran10/lista_compra/releases/tag/beta-v0.0.1)
 

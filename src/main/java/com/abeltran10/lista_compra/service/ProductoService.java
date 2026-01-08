@@ -29,4 +29,8 @@ public class ProductoService {
     public void eliminarProducto(Producto producto) {
         dao.eliminarProducto(producto);
     }
+
+    public List<Producto> obtenerProductosStockBajo() {
+        return dao.findAllByStockBajo();
+    }
 }
