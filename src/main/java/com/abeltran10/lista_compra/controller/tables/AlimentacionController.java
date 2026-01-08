@@ -112,6 +112,8 @@ public class AlimentacionController implements ProductoControllerIntrfz {
     public void onVer() {
         Producto producto = tablaAlimentacion.getSelectionModel().getSelectedItem();
 
+        if (producto == null) return;
+
         try {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/com/abeltran10/lista_compra/views/forms/alimentacion-form.fxml")
@@ -140,6 +142,8 @@ public class AlimentacionController implements ProductoControllerIntrfz {
     @Override
     public void onEditar() {
         Producto producto = tablaAlimentacion.getSelectionModel().getSelectedItem();
+
+        if (producto == null) return;
 
         try {
             FXMLLoader loader = new FXMLLoader(
@@ -174,6 +178,9 @@ public class AlimentacionController implements ProductoControllerIntrfz {
     @Override
     public void onEliminar() {
         Producto producto = tablaAlimentacion.getSelectionModel().getSelectedItem();
+
+        if (producto == null) return;
+
         service.eliminarProducto(producto);
 
         cargarDatos();
