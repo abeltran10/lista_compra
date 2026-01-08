@@ -77,4 +77,17 @@ public class ProductoDAO {
         }
 
     }
+
+    public List<Producto> findAllByStockBajo() {
+        EntityManager em = JPA.getEntityManager();
+
+        try {
+            return em.createQuery(
+                    "SELECT p FROM Producto p WHERE p.stock <= p.stockLimite" ,
+                    Producto.class
+            ).getResultList();
+        } finally {
+            em.close();
+        }
+    }
 }
