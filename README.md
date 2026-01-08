@@ -69,6 +69,7 @@ En el directorio src/main/resources/build encontrarás el ejecutable para que lo
 
 Lo he probado en Debian 12 con las siguientes librerías instaladas:
 
+- java jdk-17.0.7
 - libopenjfx-java
 - libopenjfx-jni
 
