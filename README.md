@@ -61,6 +61,19 @@ Alerta stock bajo
 - [beta-v0.0.1](https://github.com/abeltran10/lista_compra/releases/tag/beta-v0.0.1)
 
 
+## Ejecutable
+
+En el directorio src/main/resources/build encontrarás el ejecutable para que lo copies en tu HOME de usuario y un script para lanzar la aplicación.
+
+### Requisitos
+
+Lo he probado en Debian 12 con las siguientes librerías instaladas:
+
+- libopenjfx-java
+- libopenjfx-jni
+
+Una vez todo listo, ejecuta el script desde un Terminal.
+
 
 
 
