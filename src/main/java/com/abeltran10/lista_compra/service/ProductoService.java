@@ -1,8 +1,10 @@
 package com.abeltran10.lista_compra.service;
 
 import com.abeltran10.lista_compra.dao.ProductoDAO;
-import com.abeltran10.lista_compra.model.Producto;
 import com.abeltran10.lista_compra.enumerator.Tipo;
+import com.abeltran10.lista_compra.exception.EliminarProductoException;
+import com.abeltran10.lista_compra.exception.GuardarProductoException;
+import com.abeltran10.lista_compra.model.Producto;
 
 import java.util.List;
 
@@ -18,15 +20,15 @@ public class ProductoService {
         return dao.filtrarStockBajo(tipo.getTipo());
     }
 
-    public void anyadirProducto(Producto producto) throws Exception {
+    public void anyadirProducto(Producto producto) throws GuardarProductoException {
         dao.guardarProducto(producto);
     }
 
-    public void editarProducto(Producto producto) throws Exception {
+    public void editarProducto(Producto producto) throws GuardarProductoException {
         dao.guardarProducto(producto);
     }
 
-    public void eliminarProducto(Producto producto) throws Exception {
+    public void eliminarProducto(Producto producto) throws EliminarProductoException {
         dao.eliminarProducto(producto);
     }
 

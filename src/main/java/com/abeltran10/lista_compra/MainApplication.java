@@ -1,19 +1,15 @@
 package com.abeltran10.lista_compra;
 
-import com.abeltran10.lista_compra.model.Alimentacion;
 import com.abeltran10.lista_compra.model.Producto;
 import com.abeltran10.lista_compra.service.ProductoService;
 import com.abeltran10.lista_compra.utils.JPA;
 import com.abeltran10.lista_compra.utils.MensajeAlert;
-import jakarta.persistence.EntityManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 

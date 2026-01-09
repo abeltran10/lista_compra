@@ -72,8 +72,9 @@ public class HigieneFormController {
             producto.setUsoPersonal(chkUsoPersonal.isSelected() ? "S" : "N");
 
             stage.close();
-        } catch (Exception e) {
-            MensajeAlert.error("Datos incorrectos");
+        } catch (NumberFormatException | NullPointerException e) {
+            MensajeAlert.error("El valor del campo \"Precio medio\" debe ser un número con los decimales separados por \".\"");
+            producto = null;
         }
     }
 
