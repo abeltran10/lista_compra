@@ -6,6 +6,7 @@ import com.abeltran10.lista_compra.model.Alimentacion;
 import com.abeltran10.lista_compra.model.Producto;
 import com.abeltran10.lista_compra.enumerator.Tipo;
 import com.abeltran10.lista_compra.service.ProductoService;
+import com.abeltran10.lista_compra.utils.MensajeAlert;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -104,7 +105,9 @@ public class AlimentacionController implements ProductoControllerIntrfz {
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            MensajeAlert.error("Error inesperado.");
+        } catch (Exception e) {
+            MensajeAlert.error(e.getMessage());
         }
     }
 
@@ -135,7 +138,7 @@ public class AlimentacionController implements ProductoControllerIntrfz {
             stage.showAndWait();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            MensajeAlert.error("Error inesperado.");
         }
     }
 
@@ -171,7 +174,9 @@ public class AlimentacionController implements ProductoControllerIntrfz {
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            MensajeAlert.error("Error inesperado.");
+        } catch (Exception e) {
+            MensajeAlert.error(e.getMessage());
         }
     }
 
@@ -181,14 +186,16 @@ public class AlimentacionController implements ProductoControllerIntrfz {
 
         if (producto == null) return;
 
-        service.eliminarProducto(producto);
+        try {
+            service.eliminarProducto(producto);
 
-        cargarDatos();
+            cargarDatos();
+            MensajeAlert.confirmacion("Producto eliminado con exito.");
+        } catch (Exception e) {
+            MensajeAlert.error(e.getMessage());
+        }
 
-        mostrarConfirmacion("Producto eliminado con exito.");
     }
 
-    private void mostrarConfirmacion(String msg) {
-        new Alert(Alert.AlertType.CONFIRMATION, msg).showAndWait();
-    }
+
 }

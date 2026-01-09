@@ -35,7 +35,7 @@ public class ProductoDAO {
         }
     }
 
-    public void guardarProducto(Producto producto) {
+    public void guardarProducto(Producto producto) throws Exception {
         EntityManager em = JPA.getEntityManager();
         EntityTransaction tx = em.getTransaction();
 
@@ -51,14 +51,14 @@ public class ProductoDAO {
             if (tx.isActive()) {
                 tx.rollback();
             }
-            throw e;
+            throw new Exception("Error al guardar el producto.");
         } finally {
             em.close();
         }
 
     }
 
-    public void eliminarProducto(Producto producto) {
+    public void eliminarProducto(Producto producto) throws Exception {
         EntityManager em = JPA.getEntityManager();
         EntityTransaction tx = em.getTransaction();
 
@@ -71,7 +71,7 @@ public class ProductoDAO {
             if (tx.isActive()) {
                 tx.rollback();
             }
-            throw e;
+            throw new Exception("Error al guardar al eliminar el producto.");
         } finally {
             em.close();
         }

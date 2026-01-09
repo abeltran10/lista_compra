@@ -1,6 +1,7 @@
 package com.abeltran10.lista_compra.controller.forms;
 
 import com.abeltran10.lista_compra.model.Limpieza;
+import com.abeltran10.lista_compra.utils.MensajeAlert;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
@@ -72,7 +73,7 @@ public class LimpiezaFormController {
 
             stage.close();
         } catch (Exception e) {
-            mostrarError("Datos incorrectos");
+            MensajeAlert.error("Datos incorrectos");
         }
     }
 
@@ -90,7 +91,4 @@ public class LimpiezaFormController {
         chkEsToxico.setDisable(disable);
     }
 
-    private void mostrarError(String msg) {
-        new Alert(Alert.AlertType.ERROR, msg).showAndWait();
-    }
 }

@@ -4,6 +4,7 @@ import com.abeltran10.lista_compra.model.Alimentacion;
 import com.abeltran10.lista_compra.model.Producto;
 import com.abeltran10.lista_compra.service.ProductoService;
 import com.abeltran10.lista_compra.utils.JPA;
+import com.abeltran10.lista_compra.utils.MensajeAlert;
 import jakarta.persistence.EntityManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -37,19 +38,15 @@ public class MainApplication extends Application {
     }
 
     private void comprobarStockBajo() {
-        List<Producto> bajos = productoService.obtenerProductosStockBajo();
+        List<Producto> stockbajos = productoService.obtenerProductosStockBajo();
 
-        if (!bajos.isEmpty()) {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Stock bajo");
-            alert.setHeaderText("Productos con stock bajo");
+        if (!stockbajos.isEmpty()) {
 
-            String contenido = bajos.stream()
+            String contenido = stockbajos.stream()
                     .map(p -> "- " + p.getNombre() + " (" + p.getStock() + ")")
                     .collect(Collectors.joining("\n"));
 
-            alert.setContentText(contenido);
-            alert.showAndWait();
+            MensajeAlert.aviso(contenido);
         }
     }
 

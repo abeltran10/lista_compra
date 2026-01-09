@@ -1,6 +1,7 @@
 package com.abeltran10.lista_compra.controller.forms;
 
 import com.abeltran10.lista_compra.model.Higiene;
+import com.abeltran10.lista_compra.utils.MensajeAlert;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
@@ -72,7 +73,7 @@ public class HigieneFormController {
 
             stage.close();
         } catch (Exception e) {
-            mostrarError("Datos incorrectos");
+            MensajeAlert.error("Datos incorrectos");
         }
     }
 
@@ -88,9 +89,5 @@ public class HigieneFormController {
         spStockLimite.setDisable(disable);
         dpFechaUltimaCompra.setDisable(disable);
         chkUsoPersonal.setDisable(disable);
-    }
-
-    private void mostrarError(String msg) {
-        new Alert(Alert.AlertType.ERROR, msg).showAndWait();
     }
 }

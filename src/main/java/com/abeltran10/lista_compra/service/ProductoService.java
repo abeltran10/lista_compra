@@ -18,15 +18,15 @@ public class ProductoService {
         return dao.filtrarStockBajo(tipo.getTipo());
     }
 
-    public void anyadirProducto(Producto producto) {
+    public void anyadirProducto(Producto producto) throws Exception {
         dao.guardarProducto(producto);
     }
 
-    public void editarProducto(Producto producto) {
+    public void editarProducto(Producto producto) throws Exception {
         dao.guardarProducto(producto);
     }
 
-    public void eliminarProducto(Producto producto) {
+    public void eliminarProducto(Producto producto) throws Exception {
         dao.eliminarProducto(producto);
     }
 
