@@ -54,7 +54,7 @@ Alerta stock bajo
 
 ## Release
 
-- [v1.0.0](https://github.com/abeltran10/lista_compra/releases/tag/v1.0.1) Última
+- [v1.0.1](https://github.com/abeltran10/lista_compra/releases/tag/v1.0.1) Última
 
 - [v1.0.0](https://github.com/abeltran10/lista_compra/releases/tag/v1.0.0) 
 
