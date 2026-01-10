@@ -54,7 +54,9 @@ Alerta stock bajo
 
 ## Release
 
-- [v1.0.0](https://github.com/abeltran10/lista_compra/releases/tag/v1.0.0) Estable
+- [v1.0.0](https://github.com/abeltran10/lista_compra/releases/tag/v1.0.1) Última
+
+- [v1.0.0](https://github.com/abeltran10/lista_compra/releases/tag/v1.0.0) 
 
 - [alpha-v0.0.1](https://github.com/abeltran10/lista_compra/releases/tag/alpha-v0.0.1) 
 
@@ -63,7 +65,7 @@ Alerta stock bajo
 
 ## Ejecutable
 
-En el directorio src/main/resources/build encontrarás el ejecutable para que lo copies en tu HOME de usuario y un script para lanzar la aplicación.
+Descarga el la última release y ejecuta mvn clean package, guarda el ejecutable en tu HOME de usuario. En el directorio src/main/resources/build encontrarás un script para lanzar la aplicación. 
 
 ### Requisitos
 
@@ -73,7 +75,7 @@ Lo he probado en Debian 12 con las siguientes librerías instaladas:
 - libopenjfx-java
 - libopenjfx-jni
 
-Una vez todo listo, ejecuta el script desde un Terminal.
+Una vez todo listo ejecuta el script desde un Terminal.
 
 
 
