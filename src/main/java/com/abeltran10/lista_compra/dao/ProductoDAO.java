@@ -1,5 +1,7 @@
 package com.abeltran10.lista_compra.dao;
 
+import com.abeltran10.lista_compra.exception.EliminarProductoException;
+import com.abeltran10.lista_compra.exception.GuardarProductoException;
 import com.abeltran10.lista_compra.model.Producto;
 import com.abeltran10.lista_compra.utils.JPA;
 import jakarta.persistence.EntityManager;
@@ -35,7 +37,7 @@ public class ProductoDAO {
         }
     }
 
-    public void guardarProducto(Producto producto) {
+    public void guardarProducto(Producto producto) throws GuardarProductoException {
         EntityManager em = JPA.getEntityManager();
         EntityTransaction tx = em.getTransaction();
 
@@ -51,14 +53,14 @@ public class ProductoDAO {
             if (tx.isActive()) {
                 tx.rollback();
             }
-            throw e;
+            throw new GuardarProductoException("Error al guardar el producto.");
         } finally {
             em.close();
         }
 
     }
 
-    public void eliminarProducto(Producto producto) {
+    public void eliminarProducto(Producto producto) throws EliminarProductoException {
         EntityManager em = JPA.getEntityManager();
         EntityTransaction tx = em.getTransaction();
 
@@ -71,7 +73,7 @@ public class ProductoDAO {
             if (tx.isActive()) {
                 tx.rollback();
             }
-            throw e;
+            throw new EliminarProductoException("Error al guardar al eliminar el producto.");
         } finally {
             em.close();
         }

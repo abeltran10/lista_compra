@@ -3,15 +3,17 @@ package com.abeltran10.lista_compra.controller.tables;
 import com.abeltran10.lista_compra.controller.forms.OtrosFormController;
 import com.abeltran10.lista_compra.controller.intrfz.ProductoControllerIntrfz;
 import com.abeltran10.lista_compra.enumerator.Tipo;
+import com.abeltran10.lista_compra.exception.EliminarProductoException;
+import com.abeltran10.lista_compra.exception.GuardarProductoException;
 import com.abeltran10.lista_compra.model.Otros;
 import com.abeltran10.lista_compra.model.Producto;
 import com.abeltran10.lista_compra.service.ProductoService;
+import com.abeltran10.lista_compra.utils.MensajeAlert;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -66,9 +68,6 @@ public class OtrosController implements ProductoControllerIntrfz {
         tablaOtros.setItems(FXCollections.observableArrayList(productos));
     }
 
-    // =========================
-    // Acciones comunes
-    // =========================
     @Override
     public void onStockBajo() {
         List<Producto> productos = service.consultarStockBajo(Tipo.OTROS);
@@ -106,7 +105,9 @@ public class OtrosController implements ProductoControllerIntrfz {
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            MensajeAlert.error("Error inesperado.");
+        } catch (GuardarProductoException e) {
+            MensajeAlert.error(e.getMessage());
         }
     }
 
@@ -136,7 +137,7 @@ public class OtrosController implements ProductoControllerIntrfz {
             stage.showAndWait();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            MensajeAlert.error("Error inesperado.");
         }
     }
 
@@ -170,7 +171,9 @@ public class OtrosController implements ProductoControllerIntrfz {
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            MensajeAlert.error("Error inesperado.");
+        } catch (GuardarProductoException e) {
+            MensajeAlert.error(e.getMessage());
         }
     }
 
@@ -179,13 +182,14 @@ public class OtrosController implements ProductoControllerIntrfz {
         Producto producto = tablaOtros.getSelectionModel().getSelectedItem();
         if (producto == null) return;
 
-        service.eliminarProducto(producto);
-        cargarDatos();
+        try {
+            service.eliminarProducto(producto);
 
-        mostrarConfirmacion("Producto eliminado con éxito.");
-    }
+            cargarDatos();
+            MensajeAlert.confirmacion("Producto eliminado con éxito.");
+        } catch (EliminarProductoException e) {
+            MensajeAlert.error(e.getMessage());
+        }
 
-    private void mostrarConfirmacion(String msg) {
-        new Alert(Alert.AlertType.CONFIRMATION, msg).showAndWait();
     }
 }

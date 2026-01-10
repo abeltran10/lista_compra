@@ -1,6 +1,7 @@
 package com.abeltran10.lista_compra.controller.forms;
 
 import com.abeltran10.lista_compra.model.Otros;
+import com.abeltran10.lista_compra.utils.MensajeAlert;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
@@ -82,8 +83,9 @@ public class OtrosFormController {
             producto.setDescripcion(txtDescripcion.getText());
 
             stage.close();
-        } catch (Exception e) {
-            mostrarError("Datos incorrectos");
+        } catch (NumberFormatException | NullPointerException e) {
+            MensajeAlert.error("El valor del campo \"Precio medio\" debe ser un número con los decimales separados por \".\"");
+            producto = null;
         }
     }
 
@@ -92,7 +94,5 @@ public class OtrosFormController {
         stage.close();
     }
 
-    private void mostrarError(String msg) {
-        new Alert(Alert.AlertType.ERROR, msg).showAndWait();
-    }
+
 }

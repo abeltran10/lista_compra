@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <BorderPane
         xmlns:fx="http://javafx.com/fxml"
         fx:controller="com.abeltran10.lista_compra.controller.forms.LimpiezaFormController"
