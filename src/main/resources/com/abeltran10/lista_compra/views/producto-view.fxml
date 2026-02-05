@@ -14,6 +14,9 @@
                 <MenuItem text="Stock bajo" onAction="#onStockBajo"/>
                 <MenuItem text="Todos" onAction="#onVerTodos"/>
             </Menu>
+            <Menu text="Lista">
+                <MenuItem text="Lista de la compra" onAction="#onAbrirLista"/>
+            </Menu>
         </MenuBar>
     </top>
 

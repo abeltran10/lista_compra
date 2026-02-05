@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="com.abeltran10.lista_compra.controller.ListaCompraController"
+        prefWidth="450"
+        prefHeight="500">
+
+    <!-- ===== TÍTULO ===== -->
+    <top>
+        <Label text="Lista de la compra"
+               BorderPane.alignment="CENTER"
+               style="-fx-font-size: 18px; -fx-font-weight: bold;"
+        >
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+        </Label>
+    </top>
+
+    <!-- ===== FORMULARIO ===== -->
+    <center>
+        <HBox spacing="15">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <VBox spacing="10" HBox.hgrow="ALWAYS">
+                <TableView fx:id="tablaLista" >
+                    <columns>
+                        <TableColumn fx:id="colNombre" text="Nombre"/>
+                        <TableColumn fx:id="colStock" text="Unidades"/>
+                    </columns>
+                </TableView>
+            </VBox>
+
+            <VBox spacing="10" alignment="TOP_CENTER">
+                <Button text="Añadir" prefWidth="120" onAction="#onAnyadir"/>
+                <Button text="Editar" prefWidth="120" onAction="#onEditar"/>
+                <Button text="Eliminar" prefWidth="120" onAction="#onEliminar"/>
+            </VBox>
+        </HBox>
+    </center>
+
+    <!-- ===== BOTONES ===== -->
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Cancelar" onAction="#onCancelar"/>
+            <Button fx:id="btnGuardar" text="Guardar" defaultButton="true" onAction="#onGuardar"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
+
