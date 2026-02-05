@@ -8,6 +8,8 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import org.xhtmlrenderer.pdf.ITextRenderer;
 
 import java.io.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.List;
 
@@ -30,7 +32,17 @@ public class GenerarPDF {
     }
 
     public String setTemplateVariables(List<Producto> lista) {
+        // 1. Obtener la fecha de hoy
+        LocalDate hoy = LocalDate.now();
+
+        // 2. Definir el formato deseado
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        // 3. Formatear la fecha
+        String fechaFormateada = hoy.format(formato);
+
         context.setVariable("listaProductos", lista);
+        context.setVariable("fecha", fechaFormateada);
 
         return templateEngine.process("lista_compra", context);
 
