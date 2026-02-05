@@ -35,3 +35,5 @@ build/
 ### Mac OS ###
 .DS_Store
 /dependency-reduced-pom.xml
+/src/main/resources/uml/casos_de_ uso-PlantUML.txt
+/src/main/resources/uml/diagrama_clases-PlantUML.txt
