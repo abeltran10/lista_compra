@@ -9,7 +9,7 @@ java \
 -Djava.library.path="$NATIVE_LIBS" \
 --module-path "$JAVA_FX" \
 --add-modules javafx.controls,javafx.fxml,javafx.graphics \
--jar "$HOME/lista_compra-v1.0.1.jar"
+-jar "$HOME/lista_compra-v1.1.0.jar"
 
 
 
