@@ -109,6 +109,8 @@ public class ListaCompraController {
 
     @FXML
     public void onCancelar() {
+        this.productos.clear();
+
         this.stage.close();
     }
 
