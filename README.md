@@ -9,14 +9,14 @@ Lista De La Compra es una aplicación de escritorio para gestionar el stock de p
 ### UML
 Diagrama de casos de uso
 
-<img width="409" height="559" alt="diagrama_casos_uso" src="https://github.com/user-attachments/assets/e2de32ad-4ba1-441d-a3bb-3fdc33bac787" />
-
+<img width="409" height="550" alt="diagrama_casos_uso" src="https://github.com/user-attachments/assets/43bb30d1-ed8d-409d-867b-5624996af0a0" />
 
 
 
 Diagrama de clases
 
-<img width="2503" height="1004" alt="diagrama_clases" src="https://github.com/user-attachments/assets/3470daeb-e3ca-4955-8203-ea4e423664eb" />
+<img width="2801" height="1020" alt="diagrama_clases" src="https://github.com/user-attachments/assets/57596d71-8388-4828-8db1-9cf600228fee" />
+
 
 
 
@@ -24,37 +24,45 @@ Diagrama de clases
 
 Inicial
 
-<img width="961" height="736" alt="Captura desde 2026-01-05 12-58-22" src="https://github.com/user-attachments/assets/e41923c9-db34-4150-809b-2380b26931e7" />
+<img width="960" height="737" alt="Captura desde 2026-02-05 18-29-21" src="https://github.com/user-attachments/assets/dd486fbb-ec3f-4139-9d1a-2df2eb134d6f" />
+
 
 
 
 Crear
 
-<img width="453" height="543" alt="Captura desde 2026-01-05 12-59-38" src="https://github.com/user-attachments/assets/f6b86309-34bb-408a-8afa-52060efbe7a3" />
+<img width="453" height="539" alt="Captura desde 2026-02-05 18-29-39" src="https://github.com/user-attachments/assets/1940bc58-70ac-4454-876e-77c4a40bfbe1" />
+
 
 
 Ver
 
-<img width="453" height="543" alt="Captura desde 2026-01-05 22-01-49" src="https://github.com/user-attachments/assets/643771b3-d339-4e40-be13-02c0d37e3e28" />
+<img width="451" height="539" alt="Captura desde 2026-02-05 18-31-32" src="https://github.com/user-attachments/assets/3186651b-9443-42b8-b16b-53d1ca6363cf" />
+
 
 
 Editar
 
-<img width="453" height="543" alt="Captura desde 2026-01-05 22-02-07" src="https://github.com/user-attachments/assets/1ac6d238-b5a5-47e4-91ee-38b1ee7f5475" />
+<img width="451" height="539" alt="Captura desde 2026-02-05 18-31-16" src="https://github.com/user-attachments/assets/a28e9b54-9b79-4ad4-ad60-3937908f3c94" />
+
 
 Eliminar
 
-<img width="366" height="192" alt="Captura desde 2026-01-06 02-23-09" src="https://github.com/user-attachments/assets/11c371f2-ca8c-4e07-bd03-6012005bb297" />
+<img width="366" height="193" alt="Captura desde 2026-02-05 18-30-16" src="https://github.com/user-attachments/assets/5b3d55a6-4e4c-4146-82f7-cc2a495d895e" />
+
 
 Alerta stock bajo
 
-<img width="640" height="270" alt="Captura desde 2026-01-08 15-13-27" src="https://github.com/user-attachments/assets/b0e9521d-4700-464c-9c9e-ed8aa12f16cc" />
+<img width="370" height="215" alt="Captura desde 2026-02-05 18-32-57" src="https://github.com/user-attachments/assets/d530ef63-b1d7-4234-9813-8864fafb63f9" />
+
 
 
 
 ## Release
 
-- [v1.0.1](https://github.com/abeltran10/lista_compra/releases/tag/v1.0.1) Última
+- [v1.1.0](https://github.com/abeltran10/lista_compra/releases/tag/v1.1.0) Última
+
+- [v1.0.1](https://github.com/abeltran10/lista_compra/releases/tag/v1.0.1)
 
 - [v1.0.0](https://github.com/abeltran10/lista_compra/releases/tag/v1.0.0) 
 

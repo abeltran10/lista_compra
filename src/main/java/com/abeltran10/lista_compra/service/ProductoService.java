@@ -5,7 +5,9 @@ import com.abeltran10.lista_compra.enumerator.Tipo;
 import com.abeltran10.lista_compra.exception.EliminarProductoException;
 import com.abeltran10.lista_compra.exception.GuardarProductoException;
 import com.abeltran10.lista_compra.model.Producto;
+import com.abeltran10.lista_compra.utils.GenerarPDF;
 
+import java.io.IOException;
 import java.util.List;
 
 public class ProductoService {
@@ -34,5 +36,11 @@ public class ProductoService {
 
     public List<Producto> obtenerProductosStockBajo() {
         return dao.findAllByStockBajo();
+    }
+
+    public void generarListaCompraPDF(List<Producto> productos) throws IOException {
+        GenerarPDF generarPDF = new GenerarPDF();
+        String html = generarPDF.setTemplateVariables(productos);
+        generarPDF.generarPDF(html);
     }
 }

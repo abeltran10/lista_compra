@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Lista de Compra</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                font-size: 12pt;
+                margin: 20px;
+            }
+            .header-container {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            .titulo {
+                font-weight: bold;
+                font-size: 18pt;
+                display: block;
+            }
+            .fecha {
+                text-align: right;
+                display: block;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                border: none;
+            }
+            th, td {
+                text-align: left;
+                padding: 8px 0;
+                border: none;
+            }
+            th {
+                border-bottom: 1px solid #eee;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="header-container">
+            <span class="titulo">LISTA COMPRA</span>
+            <br />
+            <span class="fecha" th:text="${fecha}"></span>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Unidades</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="item : ${listaProductos}">
+                    <td th:text="${item.nombre}"></td>
+                    <td th:text="${item.stock}"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </body>
+</html>
