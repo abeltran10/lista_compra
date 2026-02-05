@@ -55,6 +55,16 @@ Alerta stock bajo
 
 <img width="370" height="215" alt="Captura desde 2026-02-05 18-32-57" src="https://github.com/user-attachments/assets/d530ef63-b1d7-4234-9813-8864fafb63f9" />
 
+Lista de la compra
+
+<img width="454" height="537" alt="Captura desde 2026-02-05 18-34-10" src="https://github.com/user-attachments/assets/73c8c1e6-a419-4ba1-8b65-f33c4c00f34c" />
+
+PDF
+
+<img width="871" height="733" alt="Captura desde 2026-02-05 18-40-23" src="https://github.com/user-attachments/assets/b32deafa-efbe-4fca-b8fa-6ae8a010c59a" />
+
+
+
 
 
 
