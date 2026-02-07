@@ -15,13 +15,9 @@ import java.util.List;
 
 public class GenerarPDF {
 
-    private TemplateEngine templateEngine;
-    private Context context;
+    private static TemplateEngine templateEngine = new TemplateEngine();
 
-    public GenerarPDF() {
-        templateEngine = new TemplateEngine();
-        context = new Context();
-
+    private static void inicializa() {
         ClassLoaderTemplateResolver resolver = new ClassLoaderTemplateResolver();
 
         resolver.setPrefix("/com/abeltran10/lista_compra/templates/");
@@ -31,28 +27,25 @@ public class GenerarPDF {
         templateEngine.setTemplateResolver(resolver);
     }
 
-    public String setTemplateVariables(List<Producto> lista) {
-        // 1. Obtener la fecha de hoy
+    public static void generarPDF(List<Producto> lista) throws IOException {
+        Context context = new Context();
+        String userHome = System.getProperty("user.home");
+        File dir = new File(userHome, ".lista_compra");
+        String archivoSalida = dir.getAbsolutePath() + "/lista_compra.pdf";
+        ITextRenderer renderer = new ITextRenderer();
+
+        if (!templateEngine.isInitialized()) {
+            inicializa();
+        }
+
         LocalDate hoy = LocalDate.now();
-
-        // 2. Definir el formato deseado
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
-        // 3. Formatear la fecha
         String fechaFormateada = hoy.format(formato);
 
         context.setVariable("listaProductos", lista);
         context.setVariable("fecha", fechaFormateada);
 
-        return templateEngine.process("lista_compra", context);
-
-    }
-
-    public void generarPDF(String htmlProcesado) throws IOException {
-        String userHome = System.getProperty("user.home");
-        File dir = new File(userHome, ".lista_compra");
-        String archivoSalida = dir.getAbsolutePath() + "/lista_compra.pdf";
-        ITextRenderer renderer = new ITextRenderer();
+        String htmlProcesado = templateEngine.process("lista_compra", context);
 
         OutputStream os = new FileOutputStream(archivoSalida);
 
@@ -61,5 +54,9 @@ public class GenerarPDF {
         renderer.createPDF(os);
 
         os.close();
+
+
+
+
     }
 }
