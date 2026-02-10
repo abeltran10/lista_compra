@@ -39,8 +39,6 @@ public class ProductoService {
     }
 
     public void generarListaCompraPDF(List<Producto> productos) throws IOException {
-        GenerarPDF generarPDF = new GenerarPDF();
-        String html = generarPDF.setTemplateVariables(productos);
-        generarPDF.generarPDF(html);
+        GenerarPDF.generarPDF(productos);
     }
 }

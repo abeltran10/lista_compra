@@ -1,8 +1,6 @@
 package com.abeltran10.lista_compra.controller;
 
-import com.abeltran10.lista_compra.controller.forms.AlimentacionFormController;
 import com.abeltran10.lista_compra.controller.intrfz.ProductoControllerIntrfz;
-import com.abeltran10.lista_compra.model.Alimentacion;
 import com.abeltran10.lista_compra.model.Producto;
 import com.abeltran10.lista_compra.service.ProductoService;
 import com.abeltran10.lista_compra.utils.MensajeAlert;
@@ -126,7 +124,7 @@ public class ProductoController {
     public void onAbrirLista() {
         try {
             FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/com/abeltran10/lista_compra/views/forms/lista-compra.fxml")
+                    getClass().getResource("/com/abeltran10/lista_compra/views/lista-compra.fxml")
             );
 
             Parent root = loader.load();

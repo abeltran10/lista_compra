@@ -6,7 +6,7 @@
 <BorderPane
         xmlns:fx="http://javafx.com/fxml"
         fx:controller="com.abeltran10.lista_compra.controller.ListaCompraController"
-        prefWidth="450"
+        prefWidth="580"
         prefHeight="500">
 
     <!-- ===== TÍTULO ===== -->
